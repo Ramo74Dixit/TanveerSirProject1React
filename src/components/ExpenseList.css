@@ -1,0 +1,153 @@
+
+.expense-list-container {
+  width: 100%;
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 25px;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 18px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+.expense-list-container h2 {
+  color: #f8fafc;
+  font-size: 25px;
+  font-weight: 700;
+  margin: 0 0 25px;
+}
+
+/* Individual transaction card */
+
+.expense-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  padding: 20px;
+  margin-bottom: 15px;
+  background: #0f172a;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.expense-item:last-child {
+  margin-bottom: 0;
+}
+
+.expense-item:hover {
+  border-color: #6366f1;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+/* Expense details */
+
+.expense-details {
+  flex: 1;
+  min-width: 140px;
+}
+
+.expense-details h3 {
+  margin: 0 0 8px;
+  color: #f8fafc;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.expense-details p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+/* Amount */
+
+.expense-amount {
+  color: #a5b4fc;
+  font-size: 19px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+/* Action buttons */
+
+.expense-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.expense-actions button {
+  padding: 9px 15px;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.edit-btn {
+  background: #312e81;
+  color: #c7d2fe;
+}
+
+.edit-btn:hover {
+  background: #4338ca;
+  color: white;
+}
+
+.delete-btn {
+  background: #450a0a;
+  color: #fca5a5;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+  color: white;
+}
+
+/* Empty state */
+
+.empty-expenses {
+  max-width: 650px;
+  margin: 30px auto;
+  padding: 50px 25px;
+  text-align: center;
+  background: #1e293b;
+  border: 1px dashed #475569;
+  border-radius: 18px;
+}
+
+.empty-expenses p {
+  margin: 0;
+  color: #94a3b8;
+  font-size: 17px;
+}
+
+/* Responsive design */
+
+@media (max-width: 600px) {
+  .expense-list-container {
+    padding: 18px;
+  }
+
+  .expense-item {
+    align-items: flex-start;
+  }
+
+  .expense-details {
+    flex-basis: 60%;
+  }
+
+  .expense-actions {
+    width: 100%;
+  }
+
+  .expense-actions button {
+    flex: 1;
+  }
+}
